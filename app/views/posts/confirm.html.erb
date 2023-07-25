@@ -1,3 +1,9 @@
-<h1>Whisper詳細画面</h1>
+<h2>以下の内容で確定する</h2>
 
-<p>内容：<%= @post.content %></p>
+<%= form_with( model: @post, local: true ) do |form| %>
+  <%= form.hidden_field :content %>
+
+  <p>内容： <%= @post.content %></p>
+  <%= form.submit "投稿を確定する" %>
+  <%= form.submit '戻る', name: 'back' %>
+<% end %>
