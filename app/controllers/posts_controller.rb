@@ -12,6 +12,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       redirect_to posts_path, notice: "新たにWhisperしました！"
+    else
+      render :new
     end
   end
 
