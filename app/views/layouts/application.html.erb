@@ -11,6 +11,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>
+        <a href="/posts">Whisper</a>
+      </h1>
+      <nav class="whisper-nav">
+        <ul>
+          <li><a href="/posts">Whisper一覧</a></li>
+          <li><a href="/posts/new">Whisper新規作成</a></li>
+        </ul>
+    </header>
+    <div class="main-body">
+      <%= yield %>
+    </div>
+    <footer>
+    <p>© All rights reserved by TaikiYamamoto.</p>
+    </footer>
   </body>
 </html>
